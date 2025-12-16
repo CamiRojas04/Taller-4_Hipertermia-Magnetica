@@ -3,10 +3,10 @@
 **Aplicación:** Hipertermia Magnética  
 **Topología:** Oscilador Royer Auto-resonante (Push-Pull ZVS)
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 Este repositorio documenta el diseño, análisis de señal y simulación de un inversor resonante auto-oscilante en configuración *Zero Voltage Switching* (ZVS). El objetivo del circuito es generar una corriente alterna de alta frecuencia ($f_0 \approx 100 \text{ kHz}$) sobre una carga inductiva de baja impedancia ($6 \mu H$), minimizando las pérdidas por conmutación en los semiconductores de potencia mediante la activación en el cruce por cero de la tensión $V_{DS}$.
 
-## ⚙️ Especificaciones de Diseño
+## Especificaciones de Diseño
 El sistema se modeló como un circuito tanque RLC paralelo sub-amortiguado excitado por una etapa de potencia Push-Pull.
 
 * **Frecuencia de Resonancia ($f_0$):** $100 \text{ kHz}$ (Objetivo).
@@ -15,7 +15,7 @@ El sistema se modeló como un circuito tanque RLC paralelo sub-amortiguado excit
 * **Alimentación ($V_{CC}$):** $12\text{V} - 48\text{V}$ DC.
 * **Tensión Pico en Tanque:** $\approx \pi \cdot V_{CC}$.
 
-## 🛡️ Análisis de Selección de Componentes
+## Análisis de Selección de Componentes
 La selección de dispositivos se realizó mediante el análisis de la Zona de Operación Segura (SOA) y parámetros dinámicos, utilizando las hojas de datos oficiales:
 
 ### 1. Elementos de Conmutación (Q1, Q2)
