@@ -44,9 +44,9 @@ El diseño prescinde de resultados experimentales en esta fase, validándose med
 2.  **Análisis Transitorio:** Las simulaciones confirman la conmutación ZVS, donde $V_{DS}$ cae a cero antes de la activación del gate, eliminando teóricamente las pérdidas de potencia por conmutación ($P_{sw} \approx 0$).
 
 ## Estructura del Repositorio
-* `/src`: Cálculos teóricos de impedancia y frecuencia.
-* `/sim`: Archivos de simulación SPICE (LTspice/Multisim).
-* `/docs`: Hojas de datos y diagramas esquemáticos.
+* `Análisis Físico`: Cálculos teóricos de impedancia y frecuencia.
+* `Circuito ZVS.md14`: Archivos de simulación SPICE (LTspice/Multisim).
+* `Datasheets`: Hojas de datos y diagramas esquemáticos.
 
 ---
 **Nota:** Este proyecto se centra en el diseño y análisis de la etapa de potencia analógica. La implementación física requiere consideraciones adicionales de disipación térmica activa.
