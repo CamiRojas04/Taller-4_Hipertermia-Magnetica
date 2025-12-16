@@ -1,0 +1,19 @@
+# Acción de los Diodos Ultrarrápidos (MUR1520) en el Circuito ZVS
+
+## Función en el Oscilador
+En la topología ZVS (Zero Voltage Switching), los diodos **MUR1520** actúan como elementos de **retroalimentación y descarga de compuerta**. Su función es drenar rápidamente la carga capacitiva del *Gate* del MOSFET que debe apagarse cuando el lado opuesto del oscilador se activa. Esto asegura una conmutación limpia y sincronizada, evitando que ambos transistores conduzcan simultáneamente (*shoot-through*).
+
+## Parámetro Crítico: Tiempo de Recuperación Inversa ($t_{rr}$)
+La característica que hace al MUR1520 indispensable para esta aplicación a 100 kHz es su velocidad de conmutación.
+* [cite_start]**Especificación:** El datasheet define el dispositivo como un "Rectificador Ultrarrápido" con un tiempo de recuperación inversa ($t_{rr}$) de **35 nanosegundos**[cite: 2006, 2008, 2061].
+* **Importancia Física:** A 100 kHz, el periodo de oscilación es de $10 \mu s$. Un diodo rectificador estándar (como un 1N4007) tarda varios microsegundos en bloquearse tras conducir. Si se usara un diodo lento, este permanecería conduciendo corriente en sentido inverso durante gran parte del ciclo, cortocircuitando la señal de control y provocando el calentamiento o destrucción de los MOSFETs.
+
+## Impacto en el Rendimiento
+[cite_start]El tiempo de 35 ns es despreciable frente al periodo de oscilación, garantizando que el diodo pase de estado de conducción a bloqueo casi instantáneamente[cite: 2008]. Esto permite:
+1.  **Minimización de Pérdidas:** Reduce la disipación de potencia dinámica en los semiconductores.
+2.  **Protección:** Evita la conducción cruzada destructiva.
+3.  **Estabilidad:** Mantiene la oscilación sostenida a alta frecuencia sin distorsión de la forma de onda en el tanque.
+
+---
+**Referencia Técnica:**
+*ON Semiconductor. (2006). MUR1520 Switchmode Power Rectifiers Datasheet. [cite_start]Rev 4.* [cite: 2000, 2048, 2051]
